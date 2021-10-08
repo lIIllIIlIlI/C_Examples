@@ -27,8 +27,7 @@ typedef struct {
 } IOREGISTER_Type;
 
 // 3. Einfacher Zugriff aus dem User Code mit nur einer Zeile. 
-// Note: Man verwendet '->' statt '.' um über einen Pointer auf elemente eines structs zuzugreifen. Das Bit hingegeben wird tatsächlich als 
-// zwischenvariable geladen und daraus wiederum das BIT1 gezogen. 
+// Note: '->var' ist die Kurzversion von '(*var).', IOREGISTER ist ein Pointer, er wird mit dem Operator dereferenziert um auf das Struct zugreifen zu können. 
 bool Register1Bit1Value = IOREGISTER->IORegister1.bit.BIT1;
 
 
